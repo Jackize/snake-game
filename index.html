@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Game — Trò Chơi Con Rắn</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="game-container">
+    <header class="game-header">
+      <h1>🐍 Snake Game</h1>
+      <div class="scoreboard">
+        <span>Điểm: <strong id="score">0</strong></span>
+        <span>Kỷ lục: <strong id="high-score">0</strong></span>
+      </div>
+    </header>
+
+    <canvas id="game-canvas" width="400" height="400"></canvas>
+
+    <div class="controls">
+      <button id="start-btn">Bắt đầu</button>
+      <p class="hint">Dùng phím mũi tên hoặc WASD để điều khiển</p>
+    </div>
+
+    <div id="overlay" class="overlay hidden">
+      <div class="overlay-content">
+        <h2 id="overlay-title">Game Over</h2>
+        <p id="overlay-message">Điểm của bạn: 0</p>
+        <button id="restart-btn">Chơi lại</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/game.js"></script>
+</body>
+</html>

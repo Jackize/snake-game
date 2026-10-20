@@ -1,0 +1,118 @@
+/* ===== Reset & cơ bản ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Container ===== */
+.game-container {
+  position: relative;
+  text-align: center;
+  padding: 24px;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+.game-header h1 {
+  font-size: 1.5rem;
+  color: #4ecca3;
+}
+
+.scoreboard {
+  display: flex;
+  gap: 16px;
+  font-size: 0.95rem;
+}
+
+.scoreboard strong {
+  color: #ffd369;
+}
+
+/* ===== Canvas ===== */
+#game-canvas {
+  background: #0f3460;
+  border: 3px solid #4ecca3;
+  border-radius: 8px;
+  display: block;
+  margin-inline: auto;
+}
+
+/* ===== Điều khiển ===== */
+.controls {
+  margin-top: 16px;
+}
+
+.controls .hint {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+button {
+  background: #4ecca3;
+  color: #1a1a2e;
+  border: none;
+  padding: 10px 28px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: #3dbb92;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* ===== Overlay (Game Over / Bắt đầu) ===== */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay-content {
+  background: #16213e;
+  padding: 32px 48px;
+  border-radius: 12px;
+  border: 2px solid #4ecca3;
+}
+
+.overlay-content h2 {
+  color: #ff4d6d;
+  margin-bottom: 12px;
+}
+
+.overlay-content p {
+  margin-bottom: 20px;
+}
